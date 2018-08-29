@@ -1,0 +1,17 @@
+<div class="searchContainer">
+  <mat-card class="searchCard">
+    <form (ngSubmit)="onSubmit()" #search="ngForm" class="searchForm">
+      <mat-form-field appearance="standard" [hideRequiredMarker]="true" class="searchInputField">
+        <mat-label>Search</mat-label>
+        <input matInput placeholder="Search for a movie" type="text" name="search" required [(ngModel)]="model.query">
+      </mat-form-field>
+      <button mat-fab type='submit' [disabled]="!search.form.valid" color="primary">
+        <mat-icon aria-label="Search">search</mat-icon>
+      </button>
+    </form>
+  </mat-card>
+</div>
+
+<div *ngFor="let item of content | keyvalue">
+  {{item.key}}:{{item.value}}
+</div>

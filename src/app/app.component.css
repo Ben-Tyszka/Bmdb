@@ -1,0 +1,12 @@
+body {
+    font-family: Roboto, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.toolbar {
+    width: 100%;
+}
