@@ -1,0 +1,28 @@
+.movieContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 88px;
+}
+
+.moviePlot {
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 570px) {
+    .movieCard {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .movieCard * {
+        margin: 12px;
+    }
+}
+
+@media screen and (min-width: 570px) {
+    .movieCard {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

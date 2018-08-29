@@ -6,12 +6,14 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component'
 import { SearchComponent } from './search/search.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { MatCardModule, MatFormFieldModule, MatInputModule, MatToolbarModule, MatButtonModule, MatIconModule } from '@angular/material'
+import { MatCardModule, MatFormFieldModule, MatInputModule, MatToolbarModule, MatButtonModule, MatIconModule } from '@angular/material';
+import { MovieComponent } from './movie/movie.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchComponent
+    SearchComponent,
+    MovieComponent
   ],
   imports: [
     BrowserModule,

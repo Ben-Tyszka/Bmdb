@@ -1,0 +1,22 @@
+<div class="movieContainer" *ngIf="content">
+  <mat-card class="movieCard">
+    <mat-card-title-group>
+      <mat-card-title>
+        {{content.Title}}
+      </mat-card-title>
+      <mat-card-subtitle>
+        {{content.Released}} | {{content.Country}}
+        <br> Metascore: {{content.Metascore}}
+        <br> Director: {{content.Director}}
+        <br> Genre: {{content.Genre}}
+      </mat-card-subtitle>
+      <img mat-card-lg-image src={{content.Poster}}>
+    </mat-card-title-group>
+    <mat-card-content class="moviePlot">
+      {{content.Plot}}
+    </mat-card-content>
+    <mat-card-footer>
+      {{content.Production}}
+    </mat-card-footer>
+  </mat-card>
+</div>

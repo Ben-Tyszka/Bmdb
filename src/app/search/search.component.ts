@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core'
 
 import { Query } from '../query'
 import { SearchService } from '../search.service'
-import { IContent } from '../content'
 
 @Component({
   selector: 'app-search',
@@ -11,7 +10,6 @@ import { IContent } from '../content'
 })
 export class SearchComponent implements OnInit {
   model = new Query('')
-  content: IContent
 
   constructor(private searchService: SearchService) { }
 
@@ -19,9 +17,8 @@ export class SearchComponent implements OnInit {
 
   onSubmit() {
     const { query } = this.model
-    console.log('searching... %s', query)
-    this.searchService.search(query)
-      .subscribe((data: IContent) => this.content = data)
+
+    this.searchService.search(query).subscribe((data) => this.searchService.setData(data))
   }
 
 }
