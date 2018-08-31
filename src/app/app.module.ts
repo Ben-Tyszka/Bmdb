@@ -1,12 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
-import { ReactiveFormsModule  } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component'
 import { SearchComponent } from './search/search.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { MatCardModule, MatFormFieldModule, MatInputModule, MatToolbarModule, MatButtonModule, MatIconModule } from '@angular/material'
+import {
+  MatCardModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatToolbarModule,
+  MatButtonModule,
+  MatIconModule,
+  MatProgressSpinnerModule
+} from '@angular/material'
 import { MovieComponent } from './movie/movie.component'
 
 @NgModule({
@@ -25,7 +33,8 @@ import { MovieComponent } from './movie/movie.component'
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
