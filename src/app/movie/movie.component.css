@@ -10,6 +10,10 @@
     margin-top: 10px;
 }
 
+.movieCardError {
+    background-color: #EF5350;
+}
+
 @media screen and (min-width: 570px) {
     .movieCard {
         margin-left: 50px;

@@ -12,7 +12,11 @@ export class MovieComponent implements OnInit {
   content: IContent
 
   constructor(private readonly searchService: SearchService) {
-    searchService.apiData$.subscribe(data => this.content = data)
+    searchService.apiData$.subscribe(data => {
+      console.log(data)
+      this.content = data
+    }
+    )
   }
 
   ngOnInit() { }
