@@ -8,4 +8,5 @@ export interface IContent {
     Poster: String
     Plot: String
     Production: String
+    Response?: String
 }

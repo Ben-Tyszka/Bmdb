@@ -16,7 +16,7 @@ export class SearchService {
   constructor(private http: HttpClient) { }
 
   search(query: String): Observable<IContent> {
-    return this.http.get<IContent>(`http://www.omdbapi.com/?apikey=${this.apiKey}&t=${query}`)
+    return this.http.get<IContent>(`https://www.omdbapi.com/?apikey=${this.apiKey}&t=${query}`)
       .pipe(
         map(data => data)
       )

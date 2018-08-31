@@ -1,5 +1,5 @@
 {
   "projects": {
-    "build": "bmdb-bty"
+    "default": "bmdb-bty"
   }
 }
