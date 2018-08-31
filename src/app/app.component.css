@@ -9,4 +9,9 @@ body {
 
 .toolbar {
     width: 100%;
+    display: flex;
+}
+
+.fill-remaining-space {
+    flex: 1 1 auto;
 }

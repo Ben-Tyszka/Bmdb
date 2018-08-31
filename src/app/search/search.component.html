@@ -1,6 +1,7 @@
 <div class="searchContainer">
   <mat-card class="searchCard">
-    <form (ngSubmit)="onSubmit()" class="searchForm" [formGroup]="form">
+    <form (ngSubmit)="onSubmit()" class="searchForm" [formGroup]="form" autocomplete="off">
+      <input autocomplete="false" type="text" style="display:none;">
       <mat-form-field appearance="standard" [hideRequiredMarker]="true" class="searchInputField">
         <mat-label>Search</mat-label>
         <input matInput placeholder="Search for a movie" formControlName="query">
