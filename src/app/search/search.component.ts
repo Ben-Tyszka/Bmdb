@@ -11,6 +11,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 })
 export class SearchComponent implements OnInit {
   form: FormGroup
+  loading: Boolean
 
   constructor(private searchService: SearchService, private formBuilder: FormBuilder) { }
 
@@ -31,7 +32,11 @@ export class SearchComponent implements OnInit {
   }
 
   async onSubmit() {
-    this.searchService.search(this.query.value).subscribe(data => this.searchService.setData(data))
+    this.loading = true
+    this.searchService.search(this.query.value).subscribe(data => {
+      this.loading = false
+      this.searchService.setData(data)
+    })
   }
 
 }
