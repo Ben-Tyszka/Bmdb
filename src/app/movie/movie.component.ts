@@ -11,7 +11,7 @@ import { IContent } from '../content'
 export class MovieComponent implements OnInit {
   content: IContent
 
-  constructor(private searchService: SearchService) {
+  constructor(private readonly searchService: SearchService) {
     searchService.apiData$.subscribe(data => this.content = data)
   }
 

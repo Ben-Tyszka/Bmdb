@@ -1,11 +1,15 @@
 <div class="searchContainer">
   <mat-card class="searchCard">
-    <form (ngSubmit)="onSubmit()" #search="ngForm" class="searchForm">
+    <form (ngSubmit)="onSubmit()" class="searchForm" [formGroup]="form">
       <mat-form-field appearance="standard" [hideRequiredMarker]="true" class="searchInputField">
         <mat-label>Search</mat-label>
-        <input matInput placeholder="Search for a movie" type="text" name="search" required [(ngModel)]="model.query">
+        <input matInput placeholder="Search for a movie" formControlName="query">
+        <mat-error *ngIf="query.errors?.minlength && query.touched">Query be at least 3 characters</mat-error>
+        <mat-error *ngIf="query.errors?.maxlength && query.touched">Query cannot be more than 24 characters</mat-error>
+        <mat-error *ngIf="query.errors?.pattern && query.touched">Your input looks weird</mat-error>
+        <mat-error *ngIf="query.errors?.required && query.touched">Please enter something</mat-error>
       </mat-form-field>
-      <button mat-fab type='submit' [disabled]="!search.form.valid" color="primary">
+      <button mat-fab type='submit' [disabled]="form.invalid" color="primary">
         <mat-icon aria-label="Search">search</mat-icon>
       </button>
     </form>
